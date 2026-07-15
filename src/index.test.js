@@ -33,3 +33,15 @@ describe("calculator", () => {
     expect(calculator.multiply(5, 5)).toBe(25);
   });
 });
+
+describe("caesarCipher", () => {
+  test("wrapping test from z to a, abc should equal xyz", () => {
+    expect(caesarCipher("abc", 3)).toBe("xyz");
+  });
+  test("case preservation - 'HeLLo' to equal 'KhOOr'", () => {
+    expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
+  });
+  test("test punctuation - 'Hello, World!'", () => {
+    expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
+  });
+});
