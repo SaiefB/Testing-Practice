@@ -1,10 +1,20 @@
-//index.test.js
-const sum = require("./index");
+// index.test.js
+const { add, capitalize, reverse } = require("./index");
 
-test("adds 1 + 2 to equal three", () => {
-  expect(sum(1, 2)).toBe(3);
+describe("add", () => {
+  test("adds 1 + 2 to equal 3", () => {
+    expect(add(1, 2)).toBe(3);
+  });
 });
 
-test('adds 1 + "hello" to return undefined', () => {
-  expect(sum(1, "hello")).toBeUndefined();
+describe("capitalize", () => {
+  test("capitalizes the first letter", () => {
+    expect(capitalize("hello")).toBe("Hello");
+  });
+});
+
+describe("reverse", () => {
+  test("reverse the string", () => {
+    expect(reverse("hello")).toBe("olleh");
+  });
 });

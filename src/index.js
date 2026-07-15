@@ -1,11 +1,22 @@
 // index.js
 import "./styles.css";
 
-function sum(a, b) {
-  if (isNaN(a) || isNaN(b)) {
-    return;
-  }
+// function to add two numbers
+function add(a, b) {
   return a + b;
 }
 
-module.exports = sum;
+// function to capitalize the first letter in a string
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+// function reverse a string
+function reverse(str) {
+  let splitStr = str.split("");
+  let reversedStr = splitStr.reverse();
+  let joinedStr = reversedStr.join("");
+  return joinedStr;
+}
+
+module.exports = { add, capitalize, reverse };
