@@ -35,4 +35,16 @@ const calculator = {
   },
 };
 
-module.exports = { add, capitalize, reverse, calculator };
+// A caesarCipher function that takes a string and a shift factor and returns it with each character “shifted"
+//https://www.aleksandrhovhannisyan.com/blog/caesar-cipher/
+
+// function to normalise string i.e make string lowercase
+function normalise(str) {
+  str.
+}
+
+function caesarCipher(str) {
+  return str;
+}
+
+module.exports = { add, capitalize, reverse, calculator, caesarCipher };

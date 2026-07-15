@@ -1,5 +1,11 @@
 // index.test.js
-const { add, capitalize, reverse, calculator } = require("./index");
+const {
+  add,
+  capitalize,
+  reverse,
+  calculator,
+  caesarCipher,
+} = require("./index");
 
 describe("add", () => {
   test("adds 1 + 2 to equal 3", () => {
