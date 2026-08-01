@@ -39,12 +39,26 @@ const calculator = {
 //https://www.aleksandrhovhannisyan.com/blog/caesar-cipher/
 
 // function to normalise string i.e make string lowercase
-function normalise(str) {
-  str.
-}
+function caesarCipher(str, key) {
+  let alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+  let result = "";
 
-function caesarCipher(str) {
-  return str;
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    let lowerChar = char.toLowerCase();
+    let index = alphabet.indexOf(lowerChar);
+
+    if (index === -1) {
+      // not a letter — leave it untouched
+      result += char;
+    } else {
+      let shiftedChar = alphabet[(index + key) % 26];
+      // match the original character's case
+      result += char === lowerChar ? shiftedChar : shiftedChar.toUpperCase();
+    }
+  }
+
+  return result;
 }
 
 module.exports = { add, capitalize, reverse, calculator, caesarCipher };
